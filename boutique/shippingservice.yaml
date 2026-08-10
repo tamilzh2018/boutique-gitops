@@ -49,6 +49,8 @@ spec:
         - name: PORT
           value: "50051"
         # OpenTelemetry Collector for tracing
+        - name: OTEL_SERVICE_NAME
+          value: shippingservice
         - name: OTEL_EXPORTER_OTLP_ENDPOINT
           value: http://otel-collector.monitoring.svc.cluster.local:4318
         - name: DISABLE_PROFILER

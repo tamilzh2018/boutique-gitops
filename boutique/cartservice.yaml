@@ -50,6 +50,9 @@ spec:
         - name: REDIS_ADDR
           value: "redis-cart:6379"
 # OpenTelemetry Collector for tracing
+
+        - name: OTEL_SERVICE_NAME # Service Graph
+          value: cartservice
         - name: OTEL_EXPORTER_OTLP_ENDPOINT
           value: http://otel-collector.monitoring.svc.cluster.local:4318
         resources:

@@ -53,6 +53,9 @@ spec:
         - name: PORT
           value: "7000"
 # OpenTelemetry Collector for tracing
+
+        - name: OTEL_SERVICE_NAME # Service Graph
+          value: currencyservice
         - name: OTEL_EXPORTER_OTLP_ENDPOINT
           value: http://otel-collector.monitoring.svc.cluster.local:4318
         - name: DISABLE_PROFILER

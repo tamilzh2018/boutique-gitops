@@ -62,6 +62,8 @@ spec:
         - name: PRODUCT_CATALOG_SERVICE_ADDR
           value: "productcatalogservice:3550"
         # OpenTelemetry Collector for tracing
+        - name: OTEL_SERVICE_NAME
+          value: recommendationservice
         - name: OTEL_EXPORTER_OTLP_ENDPOINT
           value: http://otel-collector.monitoring.svc.cluster.local:4318
         - name: DISABLE_PROFILER

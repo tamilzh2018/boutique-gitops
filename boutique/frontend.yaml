@@ -70,7 +70,10 @@ spec:
             value: "1"
           - name: COLLECTOR_SERVICE_ADDR
             value: "otel-collector.monitoring.svc.cluster.local:4317"
-            # OpenTelemetry Collector for tracing
+# OpenTelemetry Collector for tracing
+
+          - name: OTEL_SERVICE_NAME # Service Graph
+            value: frontend
           - name: OTEL_EXPORTER_OTLP_ENDPOINT
             value: http://otel-collector.monitoring.svc.cluster.local:4318
           - name: PRODUCT_CATALOG_SERVICE_ADDR
