@@ -1,0 +1,22 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aiops-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: aiops-demo
+  template:
+    metadata:
+      labels:
+        app: aiops-demo
+    spec:
+      containers:
+        - name: aiops-demo
+          image: nginx:latest
+          command: ["/bin/sh", "-c"]
+          args:
+            - exit 1
+
