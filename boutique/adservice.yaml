@@ -51,6 +51,9 @@ spec:
         env:
         - name: PORT
           value: "9555"
+# OpenTelemetry Collector for tracing
+        - name: OTEL_EXPORTER_OTLP_ENDPOINT
+          value: http://otel-collector.monitoring.svc.cluster.local:4318
         resources:
           requests:
             cpu: 200m
