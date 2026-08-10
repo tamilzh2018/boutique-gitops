@@ -18,6 +18,8 @@ metadata:
   name: currencyservice
   labels:
     app: currencyservice
+  annotations:
+    instrumentation.opentelemetry.io/inject-nodejs: boutique-instrumentation
 spec:
   selector:
     matchLabels:

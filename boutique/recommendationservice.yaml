@@ -18,6 +18,8 @@ metadata:
   name: recommendationservice
   labels:
     app: recommendationservice
+  # annotations:
+  #   instrumentation.opentelemetry.io/inject-python: boutique-instrumentation
 spec:
   selector:
     matchLabels:

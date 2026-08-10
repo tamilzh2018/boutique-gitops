@@ -66,6 +66,10 @@ spec:
           env:
           - name: PORT
             value: "8080"
+          - name: ENABLE_TRACING
+            value: "1"
+          - name: COLLECTOR_SERVICE_ADDR
+            value: "otel-collector.monitoring.svc.cluster.local:4317"
           - name: PRODUCT_CATALOG_SERVICE_ADDR
             value: "productcatalogservice:3550"
           - name: CURRENCY_SERVICE_ADDR
@@ -88,6 +92,8 @@ spec:
           #   value: "aws"
           - name: ENABLE_PROFILER
             value: "0"
+
+
           # - name: CYMBAL_BRANDING
           #   value: "true"
           # - name: ENABLE_ASSISTANT
@@ -127,7 +133,7 @@ metadata:
   labels:
     app: frontend
 spec:
-  type: LoadBalancer
+  type: NodePort
   selector:
     app: frontend
   ports:

@@ -18,6 +18,8 @@ metadata:
   name: adservice
   labels:
     app: adservice
+  annotations:
+    instrumentation.opentelemetry.io/inject-java: boutique-instrumentation
 spec:
   selector:
     matchLabels:

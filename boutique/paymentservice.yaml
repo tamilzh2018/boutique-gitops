@@ -18,6 +18,8 @@ metadata:
   name: paymentservice
   labels:
     app: paymentservice
+  annotations:
+    instrumentation.opentelemetry.io/inject-nodejs: boutique-instrumentation
 spec:
   selector:
     matchLabels:

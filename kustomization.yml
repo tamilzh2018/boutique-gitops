@@ -1,0 +1,20 @@
+apiVersion: kustomize.config.boutique.io/v1beta1
+kind: Kustomization
+
+namespace: boutique
+
+resources:
+  - boutique/namespace.yml
+  - boutique/adservice
+  - boutique/cartservice.yml
+  - boutique/checkoutservice.yml
+  - boutique/currencyservice.yml
+  - boutique/emailservice.yml
+  - boutique/frontend.yml
+  - boutique/loadgenerator.yml
+  - boutique/paymentservice.yml
+  - boutique/productcatalogservice.yml
+  - boutique/recommendationservice.yml
+  - boutique/shippingservice.yml
+ 
+
